@@ -9,17 +9,17 @@ import com.yucfangxiaoyun.yucfirsttestdemo.database.entities.Course
 interface CourseDao {
     // we can query the course table by querying
     @Query("SELECT * FROM course")
-    fun getAllCourses(): List<Course>
+    suspend fun getAllCourses(): List<Course>
 
     // we can add some course into the student table
     @Insert
-    fun insertCourses(vararg courses: Course)
+    suspend fun insertCourses(vararg courses: Course)
 
     // we can delete some courses from student table
     @Query("DELETE FROM course WHERE couId = :courseId")
-    fun deleteStudents(courseId: Int)
+    suspend fun deleteStudents(courseId: Int)
 
     // we can select course from their id.
     @Query("SELECT couId FROM course WHERE course_name = :courseName LIMIT 1")
-    fun getCourseIdAccordingName(courseName: String): Long
+    suspend fun getCourseIdAccordingName(courseName: String): Long?
 }

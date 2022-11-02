@@ -13,9 +13,9 @@ interface StudentCourseDao {
         "SELECT student_name FROM Student WHERE stuId IN (SELECT student_id FROM StudentCourse " +
                 "GROUP BY student_id HAVING COUNT(*) = (SELECT COUNT(*) FROM course))"
     )
-    fun specialSelect(): List<String>
+    suspend fun specialSelect(): List<String>
 
     // insert student-course into student-course table
     @Insert
-    fun addStuCourse(vararg studentCourse: StudentCourse)
+    suspend fun addStuCourse(vararg studentCourse: StudentCourse)
 }

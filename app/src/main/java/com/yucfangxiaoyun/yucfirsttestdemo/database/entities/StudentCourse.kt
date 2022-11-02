@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class StudentCourse(
-    @PrimaryKey val stuCouId: Long,
+    @PrimaryKey val stuCouId: Long? = null,
     @ColumnInfo(name = "student_id") val stuId: Long,
     @ColumnInfo(name = "course_id") val couId: Long,
 )

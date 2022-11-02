@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"/>
+
+
+    <EditText
+        android:id="@+id/edit_student_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:hint="请输入学生姓名"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/txt_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_student"/>
+
+    <Button
+        android:id="@+id/btn_add_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加学生"
+        app:layout_constraintStart_toEndOf="@id/edit_student_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_content"/>
+
+    <EditText
+        android:id="@+id/edit_course_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:hint="请输入课程名字"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/edit_student_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_course"/>
+
+    <Button
+        android:id="@+id/btn_add_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加课程"
+        app:layout_constraintStart_toEndOf="@id/edit_course_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_student_name"/>
+
+    <EditText
+        android:id="@+id/edit_stucou_stu_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:hint="选课：学生名字"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_course"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/edit_stucou_course_name"/>
+
+    <EditText
+        android:id="@+id/edit_stucou_course_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:hint="选课：课程名字"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_course"
+        app:layout_constraintStart_toEndOf="@id/edit_stucou_stu_name"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_stucourse"/>
+
+    <Button
+        android:id="@+id/btn_add_stucourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加学生选课"
+        app:layout_constraintStart_toEndOf="@id/edit_stucou_course_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/edit_stucou_course_name"/>
+
+    <Button
+        android:id="@+id/btn_select_all_student_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询当前所有学生的信息"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_stucourse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_select_all_course_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询当前所有课程的信息"
+        app:layout_constraintTop_toBottomOf="@id/btn_select_all_student_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_select_special_student_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询所有选择了全部课程的学生名字"
+        app:layout_constraintTop_toBottomOf="@id/btn_select_all_course_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_go_to_second_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前往网路请求活动"
+        app:layout_constraintTop_toBottomOf="@id/btn_select_special_student_course"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

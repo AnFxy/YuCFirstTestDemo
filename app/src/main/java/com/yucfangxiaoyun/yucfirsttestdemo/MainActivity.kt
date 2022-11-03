@@ -48,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         dataBinding.btnSelectSpecialStudentCourse.setOnClickListener {
             selectSpecialStudentCourse()
         }
+
+        dataBinding.btnGoToRxjavaActivity.setOnClickListener {
+            startActivity(Intent(this@MainActivity, RxjavaActivity::class.java))
+        }
     }
 
     fun addStudent() {

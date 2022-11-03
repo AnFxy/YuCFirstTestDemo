@@ -1,8 +1,10 @@
 package com.yucfangxiaoyun.yucfirsttestdemo.network
 
+import com.yucfangxiaoyun.yucfirsttestdemo.common.Constants
 import com.yucfangxiaoyun.yucfirsttestdemo.network.interceptor.CloudInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.Duration
 
@@ -20,12 +22,13 @@ class RetrofitConfig {
             .connectTimeout(Duration.ofMillis(5000))
             .readTimeout(Duration.ofMillis(5000))
 
-        fun interceptorRetrofit(): Retrofit {
-            //  这个时候我们添加一个拦截器
-            val retrofit = originalRetrofit
-                .client(client.addInterceptor(CloudInterceptor()).build())
+        fun interceptorRetrofit(tag: String): Retrofit =
+            if (tag == Constants.TEAMGRADE) {
+                originalRetrofit.addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+            } else {
+                originalRetrofit
+            }
+                .client(client.addInterceptor(CloudInterceptor(tag)).build())
                 .build()
-            return retrofit
-        }
     }
 }

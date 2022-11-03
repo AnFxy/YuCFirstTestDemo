@@ -1,10 +1,8 @@
-package com.yucfangxiaoyun.yucfirsttestdemo
+package com.yucfangxiaoyun.yucfirsttestdemo.common
 
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import androidx.room.Room
-import com.yucfangxiaoyun.yucfirsttestdemo.database.AppDatabase
 
 class MyApplication : Application() {
     companion object {

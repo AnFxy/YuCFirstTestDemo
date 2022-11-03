@@ -4,8 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.yucfangxiaoyun.yucfirsttestdemo.Constants
+import com.yucfangxiaoyun.yucfirsttestdemo.common.Constants
 import com.yucfangxiaoyun.yucfirsttestdemo.database.daos.CourseDao
+import com.yucfangxiaoyun.yucfirsttestdemo.database.daos.RxJavaStudentDao
 import com.yucfangxiaoyun.yucfirsttestdemo.database.daos.StudentCourseDao
 import com.yucfangxiaoyun.yucfirsttestdemo.database.daos.StudentDao
 import com.yucfangxiaoyun.yucfirsttestdemo.database.entities.Course
@@ -23,6 +24,9 @@ abstract class AppDatabase : RoomDatabase() {
 
     // we get student-course dao from appDatabase
     abstract fun studentCourseDao(): StudentCourseDao
+
+    // get rxjava student dao
+    abstract fun rxjavaStudentDao(): RxJavaStudentDao
 
     companion object {
         @Volatile

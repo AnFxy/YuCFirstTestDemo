@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
+import com.yucfangxiaoyun.yucfirsttestdemo.common.Constants
 import com.yucfangxiaoyun.yucfirsttestdemo.databinding.ActivityNetWorkBinding
 import com.yucfangxiaoyun.yucfirsttestdemo.network.service.ICloudService
 import kotlinx.coroutines.delay
@@ -34,7 +35,7 @@ class NetWorkActivity : AppCompatActivity() {
         lifecycleScope.launchWhenResumed {
             binding.txtNetWork.text = ""
             try {
-                val data = ICloudService.provide().getStudents(12)
+                val data = ICloudService.provide(Constants.STUDENTS).getStudents(12)
                 delay(500)
                 binding.txtNetWork.text = data.toString()
             } catch (e: java.lang.Exception) {

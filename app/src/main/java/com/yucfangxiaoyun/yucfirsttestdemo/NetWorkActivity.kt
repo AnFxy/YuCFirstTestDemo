@@ -1,5 +1,6 @@
 package com.yucfangxiaoyun.yucfirsttestdemo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
@@ -22,6 +23,10 @@ class NetWorkActivity : AppCompatActivity() {
         binding.btnRequestNetwork.setOnClickListener {
             // 这个时候我们在主线撤出那个启动一个携程去进行网络请求
             requestRemoteData()
+        }
+
+        binding.btnGoToCoroutineScope.setOnClickListener {
+            startActivity(Intent(this@NetWorkActivity, CoroutineScopeActivity::class.java))
         }
     }
 

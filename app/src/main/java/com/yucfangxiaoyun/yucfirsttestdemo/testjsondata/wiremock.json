@@ -1,0 +1,17 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/hello"
+      },
+      "response": {
+        "body": "Hello world!",
+        "headers": {
+          "Content-Type": "text/plain"
+        },
+        "status": 200
+      }
+    }
+  ]
+}

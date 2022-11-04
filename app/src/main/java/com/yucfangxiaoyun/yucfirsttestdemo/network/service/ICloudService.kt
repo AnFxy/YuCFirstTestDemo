@@ -2,6 +2,7 @@ package com.yucfangxiaoyun.yucfirsttestdemo.network.service
 
 import com.yucfangxiaoyun.yucfirsttestdemo.database.entities.TrueStudent
 import com.yucfangxiaoyun.yucfirsttestdemo.network.RetrofitConfig
+import com.yucfangxiaoyun.yucfirsttestdemo.network.response.Fruits
 import com.yucfangxiaoyun.yucfirsttestdemo.network.response.StudentGrade
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
@@ -18,6 +19,11 @@ interface ICloudService {
     fun selectTeamGrade(
         @Query("teamname") teamName: String
     ): Single<List<StudentGrade>>
+
+    @GET("fruits")
+    suspend fun selectRemoteDataByPaging(
+        @Query("nextpagenumber") nextPageNumber: Int
+    ): List<Fruits>
 
     companion object{
         fun provide(tag: String): ICloudService {

@@ -6,4 +6,5 @@ object Constants {
     val fakeRequestPath: String = "iamthefakerrequestpath"
     val STUDENTS = "STUDENTS"
     val TEAMGRADE = "TEAMGRADE"
+    val ARTICLEURL = "https://jsonplaceholder.typicode.com/"
 }

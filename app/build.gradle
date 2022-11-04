@@ -39,6 +39,7 @@ android {
 
 dependencies {
     def room_version = "2.4.3"
+    def paging_version = "3.1.1"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -67,4 +68,13 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
     implementation 'androidx.room:room-rxjava3:2.4.3'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    // paging
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    implementation "androidx.paging:paging-rxjava3:$paging_version"
+    implementation "androidx.paging:paging-common-ktx:$paging_version"
+
+    // activity-ktx fragment-ktx
+    implementation 'androidx.activity:activity-ktx:1.5.1'
+    implementation 'androidx.fragment:fragment-ktx:1.5.1'
 }

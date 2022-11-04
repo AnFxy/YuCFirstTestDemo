@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
         dataBinding.btnGoToRxjavaActivity.setOnClickListener {
             startActivity(Intent(this@MainActivity, RxjavaActivity::class.java))
         }
+
+        dataBinding.btnGoToPagingActivity.setOnClickListener {
+            startActivity(Intent(this@MainActivity, PagingActivity::class.java))
+        }
     }
 
     fun addStudent() {

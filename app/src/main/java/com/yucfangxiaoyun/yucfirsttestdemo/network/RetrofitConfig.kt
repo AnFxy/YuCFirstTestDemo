@@ -30,5 +30,11 @@ class RetrofitConfig {
             }
                 .client(client.addInterceptor(CloudInterceptor(tag)).build())
                 .build()
+
+        fun noInterceptorRetrofit(baseURL: String): Retrofit =
+            Retrofit.Builder()
+                .baseUrl(baseURL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
     }
 }

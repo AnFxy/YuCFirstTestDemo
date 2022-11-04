@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "apple"
+  },
+  {
+    "id": 2,
+    "name": "banana"
+  },
+  {
+    "id": 3,
+    "name": "cherry"
+  },
+  {
+    "id": 4,
+    "name": "dragonFruit"
+  },
+  {
+    "id": 5,
+    "name": "flatPeach"
+  },
+  {
+    "id": 6,
+    "name": "grape"
+  },
+  {
+    "id": 7,
+    "name": "hawthorn"
+  },
+  {
+    "id": 8,
+    "name": "jackFruit"
+  },
+  {
+    "id": 9,
+    "name": "kumquat"
+  },
+  {
+    "id": 10,
+    "name": "lemon"
+  },
+  {
+    "id": 11,
+    "name": "mango"
+  },
+  {
+    "id": 12,
+    "name": "nectarine"
+  },
+  {
+    "id": 13,
+    "name": "olive"
+  },
+  {
+    "id": 14,
+    "name": "pear"
+  },
+  {
+    "id": 15,
+    "name": "raspberry"
+  },
+  {
+    "id": 16,
+    "name": "strawberry"
+  },
+  {
+    "id": 17,
+    "name": "tangerine"
+  },
+  {
+    "id": 18,
+    "name": "walnut"
+  },
+  {
+    "id": 19,
+    "name": "xFruit"
+  },
+  {
+    "id": 20,
+    "name": "yFruit"
+  },
+  {
+    "id": 21,
+    "name": "appleSecond"
+  },
+  {
+    "id": 22,
+    "name": "bananaSecond"
+  },
+  {
+    "id": 23,
+    "name": "cherrySecond"
+  },
+  {
+    "id": 24,
+    "name": "dSecond"
+  },
+  {
+    "id": 25,
+    "name": "eSecond"
+  }
+]
